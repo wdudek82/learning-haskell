@@ -73,3 +73,63 @@ morePrimes2 = 2 : morePrimes
 
 lenPrime = length morePrimes
 lenPrime2 = length morePrimes2
+
+revPrime = reverse morePrimes
+
+isListEmpty = null morePrimes
+isListEmpty2 = null []
+
+-- get from list item by index
+secondPrime = morePrimes !! 1
+
+firstPrime = head morePrimes  -- returns first
+initPrime = init morePrimes -- all but the last
+tailPrimes = tail morePrimes  -- all but the first
+lastPrime = last morePrimes  -- returns last
+
+secondPrime2 = head (tail morePrimes)
+
+first3Primes = take 3 morePrimes
+remove3Primes = drop 3 morePrimes
+
+-- is 7 in morePrimes?
+containsSeven = elem 7 morePrimes
+
+maxPrime = maximum morePrimes
+minPrime = minimum morePrimes
+sumPrimes = sum morePrimes
+prodPrimes = product morePrimes
+
+zeroToTen = [0..10]
+evenList = [2, 4.. 20]
+letterList = ['a'..'z']
+everyOtherLetter = ['a', 'c'..'z']
+
+-- ifinite lists
+infList = [10, 100..]
+
+-- repeating, replicating, cycling
+many2 = take 10 (repeat 2)
+many3 = replicate 10 3
+many123 = take 10 (cycle [1..5])
+
+-- map to all items of a list
+listTimes2 = [x * 2 | x <- [1..4]]
+
+-- filter (exclude all results exceeding 50)
+listTimes3 = [x * 3 | x <- [1..100], x * 3 <= 50]
+
+-- filter numbers divisible by 9 or 13
+listDivBy9And13 = [x | x <- [1..500], mod x 9 == 0, mod x 13 == 0]
+
+-- filter - different syntax
+biggerThan5 = filter (>5) [1..20]
+
+-- sort list
+sortedList = sort [1, 9, 2, 8, 3, 7, 5, 6]
+
+-- sort strings
+sortedString = sort "azbyc"
+
+-- zipWith
+sumOfLists = zipWith (+) [1..5] [6..10]
