@@ -133,3 +133,27 @@ sortedString = sort "azbyc"
 
 -- zipWith
 sumOfLists = zipWith (+) [1..5] [6..10]
+
+-- takeWhile
+evensUpTo20 = takeWhile (<= 20) [2,4..]
+
+-- foldl/foldr (fold from left/right)
+multOfList = foldl (*) 1 [2,3,4,5]
+
+
+-- List Comprehensions
+pow3List = [3^n | n <- [1..10]]
+
+multTable = [[x * y | y <- [1..10]] | x <- [1..10]]
+
+-- Tuples - may contain items with different data types
+randTuple = (1, "Random Tuple")
+
+bobSmith = ("Bob Smith", 52)
+bobsName = fst bobSmith
+bobsAge = snd bobSmith
+
+names = ["Bob", "Mary", "Tom"]
+addresses = ["123 Main", "234 North", "567 South"]
+
+namesNAddress = zip names addresses
